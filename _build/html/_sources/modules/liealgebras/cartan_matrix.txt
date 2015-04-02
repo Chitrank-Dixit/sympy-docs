@@ -1,0 +1,10 @@
+Cartan Matrix for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.cartan_matrix
+
+Function Reference
+------------------
+
+.. autofunction:: CartanMatrix
+

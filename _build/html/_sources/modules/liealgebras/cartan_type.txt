@@ -1,0 +1,16 @@
+Cartan Type for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.cartan_type
+
+Class Reference
+------------------
+
+.. autoclass:: CartanType_generator
+	:members: 
+
+.. autoclass:: Standard_Cartan
+	:members: 
+
+
+

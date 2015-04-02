@@ -1,0 +1,10 @@
+Type F for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.type_f
+
+Class Reference
+------------------
+
+.. autoclass:: TypeF
+	:members:

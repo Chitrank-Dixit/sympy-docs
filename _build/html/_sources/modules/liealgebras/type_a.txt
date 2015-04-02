@@ -1,0 +1,10 @@
+Type A for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.type_a
+
+Class Reference
+------------------
+
+.. autoclass:: TypeA
+	:members:

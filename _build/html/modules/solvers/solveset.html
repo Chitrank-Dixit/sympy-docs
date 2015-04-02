@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Solveset &mdash; SymPy 0.7.4.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="http://live.sympy.org/static/live-core.css" type="text/css" />
+    <link rel="stylesheet" href="http://live.sympy.org/static/live-autocomplete.css" type="text/css" />
+    <link rel="stylesheet" href="http://live.sympy.org/static/live-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7.4.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/javascript" src="http://live.sympy.org/static/utilities.js"></script>
+    <script type="text/javascript" src="http://live.sympy.org/static/external/classy.js"></script>
+    <script type="text/javascript" src="http://live.sympy.org/static/live-core.js"></script>
+    <script type="text/javascript" src="http://live.sympy.org/static/live-autocomplete.js"></script>
+    <script type="text/javascript" src="http://live.sympy.org/static/live-sphinx.js"></script>
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    <link rel="shortcut icon" href="../../_static/sympy-notailtext-favicon.ico"/>
+    <link rel="top" title="SymPy 0.7.4.1 documentation" href="../../index.html" />
+    <link rel="up" title="SymPy Modules Reference" href="../index.html" />
+    <link rel="next" title="Tensor Module" href="../tensor/index.html" />
+    <link rel="prev" title="Inequality Solvers" href="inequalities.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../tensor/index.html" title="Tensor Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="inequalities.html" title="Inequality Solvers"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">SymPy 0.7.4.1 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">SymPy Modules Reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-sympy.solvers.solveset">
+<span id="solveset"></span><h1>Solveset<a class="headerlink" href="#module-sympy.solvers.solveset" title="Permalink to this headline">¶</a></h1>
+<p>This module contains functions to solve a single equation for a single variable.</p>
+<p>Use <tt class="xref py py-func docutils literal"><span class="pre">solveset()</span></tt> to solve equations or expressions (assumed to be equal to 0) for a single variable.
+Solving an equation like x**2 == 1 can be done as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy.solvers.solveset</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Symbol</span><span class="p">,</span> <span class="n">Eq</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solveset</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+<span class="go">{-1, 1}</span>
+</pre></div>
+</div>
+<p>Or one may manually rewrite the equation as an expression equal to 0:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="go">{-1, 1}</span>
+</pre></div>
+</div>
+<p>The first argument for <tt class="xref py py-func docutils literal"><span class="pre">solveset()</span></tt> is an expression (equal to zero) or an equation and the second argument
+is the symbol that we want to solve the equation for.</p>
+<div class="section" id="diophantine-equations-des">
+<h2>Diophantine Equations (DEs)<a class="headerlink" href="#diophantine-equations-des" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="diophantine.html#diophantine-docs"><em>Diophantine</em></a></p>
+</div>
+<div class="section" id="inequalities">
+<h2>Inequalities<a class="headerlink" href="#inequalities" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="inequalities.html#inequality-docs"><em>Inequality Solvers</em></a></p>
+</div>
+<div class="section" id="ordinary-differential-equations-odes">
+<h2>Ordinary Differential equations (ODEs)<a class="headerlink" href="#ordinary-differential-equations-odes" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="ode.html#ode-docs"><em>ODE</em></a>.</p>
+</div>
+<div class="section" id="partial-differential-equations-pdes">
+<h2>Partial Differential Equations (PDEs)<a class="headerlink" href="#partial-differential-equations-pdes" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="pde.html#pde-docs"><em>PDE</em></a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/sympylogo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Solveset</a><ul>
+<li><a class="reference internal" href="#diophantine-equations-des">Diophantine Equations (DEs)</a></li>
+<li><a class="reference internal" href="#inequalities">Inequalities</a></li>
+<li><a class="reference internal" href="#ordinary-differential-equations-odes">Ordinary Differential equations (ODEs)</a></li>
+<li><a class="reference internal" href="#partial-differential-equations-pdes">Partial Differential Equations (PDEs)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="inequalities.html"
+                        title="previous chapter">Inequality Solvers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../tensor/index.html"
+                        title="next chapter">Tensor Module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/modules/solvers/solveset.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../tensor/index.html" title="Tensor Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="inequalities.html" title="Inequality Solvers"
+             >previous</a> |</li>
+        <li><a href="../../index.html">SymPy 0.7.4.1 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >SymPy Modules Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015 SymPy Development Team.
+      Last updated on Mar 30, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

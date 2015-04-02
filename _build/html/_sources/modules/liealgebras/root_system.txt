@@ -1,0 +1,10 @@
+Root System for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.root_system
+
+Class Reference
+------------------
+
+.. autoclass:: RootSystem
+	:members:

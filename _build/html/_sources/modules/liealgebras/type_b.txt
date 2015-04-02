@@ -1,0 +1,10 @@
+Type B for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.type_b
+
+Class Reference
+------------------
+
+.. autoclass:: TypeB
+	:members:

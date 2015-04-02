@@ -1,0 +1,10 @@
+Type G for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.type_g
+
+Class Reference
+------------------
+
+.. autoclass:: TypeG
+	:members:

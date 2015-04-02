@@ -1,0 +1,10 @@
+Type C for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.type_c
+
+Class Reference
+------------------
+
+.. autoclass:: TypeC
+	:members:

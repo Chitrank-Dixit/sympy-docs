@@ -1,0 +1,10 @@
+Weyl Group for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.weyl_group
+
+Class Reference
+------------------
+
+.. autoclass:: WeylGroup
+	:members:

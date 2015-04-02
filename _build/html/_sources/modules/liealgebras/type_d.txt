@@ -1,0 +1,10 @@
+Type D for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.type_d
+
+Class Reference
+------------------
+
+.. autoclass:: TypeD
+	:members:

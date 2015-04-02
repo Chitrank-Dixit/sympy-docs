@@ -1,0 +1,10 @@
+Dynkin Diagram for Lie Algebra
+================================
+
+.. module:: sympy.liealgebras.dynkin_diagram
+
+Function Reference
+------------------
+
+.. autofunction:: DynkinDiagram
+
